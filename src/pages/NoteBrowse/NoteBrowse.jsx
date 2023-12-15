@@ -1,5 +1,12 @@
+import { TextCard } from "components/TextCard/TextCard"
 import s from "./style.module.css"
+import { NoteList } from "components/containers/NoteList/NoteList"
 
 export function NoteBrowse(props) {
-    return <>Page Note Browse</>
+    return (
+        <>
+            <NoteList
+            />
+        </>
+    )
 }
