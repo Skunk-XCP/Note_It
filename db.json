@@ -43,36 +43,6 @@
       "id": 11
     },
     {
-      "title": "aaaa",
-      "content": "bbbb\n",
-      "created_at": "15/12/2023",
-      "id": 12
-    },
-    {
-      "title": "",
-      "content": "hello",
-      "created_at": "15/12/2023",
-      "id": 13
-    },
-    {
-      "title": "salut",
-      "content": "hello",
-      "created_at": "15/12/2023",
-      "id": 14
-    },
-    {
-      "title": "hey",
-      "content": "comment va",
-      "created_at": "15/12/2023",
-      "id": 15
-    },
-    {
-      "title": "Ajout d'une note",
-      "content": "que j'ai créé",
-      "created_at": "15/12/2023",
-      "id": 16
-    },
-    {
       "title": "Navigate",
       "content": "renvoie à la page home apres soumission de la note",
       "created_at": "15/12/2023",
