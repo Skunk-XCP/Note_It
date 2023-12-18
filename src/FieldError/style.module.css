@@ -1,0 +1,5 @@
+.message_error {
+    color: red;
+    position: absolute;
+    margin-top: 10px;
+}

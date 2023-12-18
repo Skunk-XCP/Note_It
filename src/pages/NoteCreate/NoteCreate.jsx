@@ -11,10 +11,15 @@ export function NoteCreate(props) {
     const navigate = useNavigate();
 
     async function createNote(formValues) {
+        // Appel à l'API pour créer une note avec les valeurs du formulaire et la date actuelle
         const createNote = await NoteAPI.create({
             ...formValues, created_at: new Date().toLocaleDateString()
         });
+
+        // Dispatch l'action addNote avec la note créée
         dispatch(addNote(createNote));
+
+        // Redirige l'utilisateur vers la page d'accueil après la création
         navigate("/");
     }
 
