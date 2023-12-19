@@ -6,34 +6,32 @@ import { NoteAPI } from "api/note-api";
 import { deleteNote } from "store/note/note-slice";
 
 export function NoteList(props) {
-    const noteList = useSelector((store) => store.NOTE.noteList);
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+   const noteList = useSelector((store) => store.NOTE.noteList);
+   const navigate = useNavigate();
+   const dispatch = useDispatch();
 
-    function deleteNote_(note) {
-        if (window.confirm("Voulez-vous supprimer la note ?")) {
-            NoteAPI.deleteById(note.id);
-            dispatch(deleteNote(note));
-        }
-    }
+   function deleteNote_(note) {
+      if (window.confirm("Voulez-vous supprimer la note ?")) {
+         NoteAPI.deleteById(note.id);
+         dispatch(deleteNote(note));
+      }
+   }
 
-    return (
-        <div className={`row justify-content-center`}>
-            {
-                noteList.map((note) => {
-                    return (
-                        <div key={note.id} className={s.card_container}>
-                            <TextCard
-                                title={note.title}
-                                subtitle={note.subtitle}
-                                content={note.content}
-                                onClick={() => navigate("/note/" + note.id)}
-                                onClickTrash={() => deleteNote_(note)}
-                            />
-                        </div>
-                    )
-                })
-            }
-        </div>
-    )
+   return (
+      <div className={`row justify-content-center`}>
+         {noteList.map((note) => {
+            return (
+               <div key={note.id} className={s.card_container}>
+                  <TextCard
+                     title={note.title}
+                     subtitle={note.created_at}
+                     content={note.content}
+                     onClick={() => navigate("/note/" + note.id)}
+                     onClickTrash={() => deleteNote_(note)}
+                  />
+               </div>
+            );
+         })}
+      </div>
+   );
 }
